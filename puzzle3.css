@@ -1,0 +1,214 @@
+:root {
+  --primary-cyan: #00ffcc;
+  --dark-bg: #050505;
+  --card-bg: rgba(15, 15, 15, 0.95);
+  --border-color: #222;
+  --text-dim: #888;
+  --danger: #ff6b6b;
+  --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--dark-bg);
+  font-family: var(--font-main);
+  color: white;
+}
+
+body {
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  background-size: 100% 3px, 3px 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.main-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: radial-gradient(circle at center, #111 0%, #000 100%);
+}
+
+.welcome-card {
+  width: 100%;
+  max-width: 980px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  padding: 12px 20px;
+  background: #111;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+.status-indicator {
+  color: var(--primary-cyan);
+  letter-spacing: 1px;
+}
+
+.card-body {
+  padding: 32px;
+}
+
+.main-title {
+  font-family: var(--font-mono);
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  text-align: center;
+  color: var(--primary-cyan);
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+  text-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--primary-cyan);
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.briefing-box,
+.hint-box,
+.cipher-box,
+.answer-box {
+  margin-bottom: 22px;
+}
+
+.briefing-box p,
+.hint-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.terminal-box {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 2px solid var(--primary-cyan);
+  padding: 18px;
+  margin-bottom: 22px;
+  font-family: var(--font-mono);
+  color: #d7fff8;
+  line-height: 1.8;
+}
+
+.cipher-box {
+  text-align: center;
+}
+
+.cipher-text {
+  display: inline-block;
+  max-width: 100%;
+  padding: 16px 26px;
+  border: 1px solid rgba(0, 255, 204, 0.18);
+  background: rgba(255, 255, 255, 0.03);
+  font-family: var(--font-mono);
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  letter-spacing: 0.08em;
+  color: var(--primary-cyan);
+  text-shadow: 0 0 14px rgba(0, 255, 204, 0.3);
+  word-break: break-word;
+}
+
+.hint-box {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 2px solid var(--primary-cyan);
+  padding: 18px;
+}
+
+.answer-box label {
+  display: block;
+  margin-bottom: 10px;
+  font-family: var(--font-mono);
+  color: #d7fff8;
+}
+
+.answer-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.answer-row input {
+  flex: 1;
+  min-width: 220px;
+  padding: 12px;
+  background: #0a0a0a;
+  color: white;
+  border: 1px solid #222;
+  outline: none;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+}
+
+.answer-row button {
+  padding: 12px 18px;
+  background: transparent;
+  border: 1px solid var(--primary-cyan);
+  color: var(--primary-cyan);
+  font-family: var(--font-mono);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.answer-row button:hover {
+  background: var(--primary-cyan);
+  color: black;
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.25);
+}
+
+.message {
+  min-height: 28px;
+  margin-top: 4px;
+  text-align: center;
+  font-family: var(--font-mono);
+  color: #d9fff8;
+}
+
+.message.error {
+  color: var(--danger);
+}
+
+.message.success {
+  color: var(--primary-cyan);
+}
+
+@media (max-width: 700px) {
+  .card-body {
+    padding: 22px 14px;
+  }
+
+  .cipher-text {
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    padding: 14px 16px;
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The New Deal Files | Puzzle 1</title>
+  <link rel="stylesheet" href="puzzle1.css" />
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <main class="main-frame">
+    <section class="welcome-card">
+      <div class="card-header">
+        <span class="status-indicator">● ENCRYPTED CONNECTION</span>
+        <span class="date-stamp">FDIC FILE</span>
+      </div>
+
+      <div class="card-body">
+        <h1 class="main-title">PUZZLE 1</h1>
+
+        <div class="briefing-box">
+          <h2 class="section-label">// WORD SEARCH</h2>
+          <p>Find the hidden term in the archive grid.</p>
+        </div>
+
+        <div class="briefing-box">
+          <h2 class="section-label">// HINT</h2>
+          <p>16 right. 14 down. T.</p>
+        </div>
+
+        <div class="grid-wrap">
+          <div id="grid" class="grid"></div>
+        </div>
+
+        <p id="message" class="message"></p>
+
+        <div id="codeBox" class="code-box hidden">
+          <label for="codeInput">Type the initials of the full term</label>
+          <div class="code-row">
+            <input id="codeInput" type="text" maxlength="4" placeholder="ENTER CODE" />
+            <button id="submitCode">UNLOCK</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

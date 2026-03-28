@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The New Deal Files | Puzzle 3</title>
+  <link rel="stylesheet" href="puzzle3.css" />
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <main class="main-frame">
+    <section class="welcome-card">
+      <div class="card-header">
+        <span class="status-indicator">● ENCRYPTED CONNECTION</span>
+        <span class="date-stamp">FINAL FILE</span>
+      </div>
+
+      <div class="card-body">
+        <h1 class="main-title">PUZZLE 3</h1>
+
+        <div class="briefing-box">
+          <h2 class="section-label">// FINAL DECRYPTION</h2>
+          <p>Decrypt the code to unlock the final archive.</p>
+        </div>
+
+        <div class="terminal-box">
+          <p>> ACCESSING FINAL FILE...</p>
+          <p>> DATA CORRUPTED</p>
+          <p>> DECRYPT REQUIRED</p>
+        </div>
+
+        <div class="cipher-box">
+          <h2 class="section-label">// ENCRYPTED CODE</h2>
+          <div class="cipher-text">QDWLRQDO BRXWK DGPLQLVWUDWLRQ</div>
+        </div>
+
+        <div class="hint-box">
+          <h2 class="section-label">// HINT</h2>
+          <p>shift -3</p>
+        </div>
+
+        <div class="answer-box">
+          <label for="finalInput">ENTER DECRYPTED ANSWER</label>
+          <div class="answer-row">
+            <input id="finalInput" type="text" placeholder="TYPE HERE" />
+            <button id="submitFinal">DECRYPT</button>
+          </div>
+        </div>
+
+        <p id="message" class="message"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="puzzle3.js"></script>
+</body>
+</html>

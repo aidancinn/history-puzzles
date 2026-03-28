@@ -1,0 +1,59 @@
+:root {
+  --cyan: #00ffcc;
+  --bg: #050505;
+  --card: rgba(15,15,15,0.95);
+  --font-mono: 'Courier New', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: white;
+  font-family: var(--font-mono);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.1) 50%);
+  pointer-events: none;
+}
+
+.main-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: var(--card);
+  padding: 40px;
+  border: 1px solid #222;
+  text-align: center;
+  max-width: 600px;
+}
+
+.title {
+  color: var(--cyan);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px rgba(0,255,204,0.4);
+}
+
+.text {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.small {
+  color: var(--cyan);
+  opacity: 0.7;
+}
